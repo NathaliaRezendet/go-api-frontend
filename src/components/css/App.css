@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  background-color: #bebed41f;
+}
+
+.topics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 50px;
+}
+
+.topic-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.topic {
+  border: 1px dashed #cdf1d8;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+  box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 11vw;
+  width: 8vw;
+  margin: 8px;
+  transition: background-color 1s, color 1s; /* Adiciona transição para a cor de fundo e do texto */
+}
+
+a {
+  font-size: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #4b4bc6;
+}
+
+.topic:hover {
+  background: #00b09b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #96c93d88, #00b09bbb);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #96c93dab, #00b09ba8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transition: 1s;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .topic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .topic {
+    height: 200px;
+  }
+}
